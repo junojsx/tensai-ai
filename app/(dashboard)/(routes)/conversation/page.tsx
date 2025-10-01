@@ -1,12 +1,29 @@
+"use client";
+
 import Heading from "@/components/ui/heading";
+import { MessageSquare } from "lucide-react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+//10mins
 
 const ConversationPage = () => {
-    return ( 
-    <>
-    <h1>Hello Conversation Page</h1>
-    < Heading />
-    </> 
-);
-}
- 
+  const form = useForm({
+    defaultValues: {
+      prompt: "",
+    },
+  });
+  return (
+    <div>
+      <Heading
+        title="Conversation"
+        description="This is the conversation page"
+        icon={MessageSquare}
+        iconColor="text-violet-500"
+        bgColor="bg-violet-500/10"
+      />
+      <div className="px-4 lg:px-8"></div>
+    </div>
+  );
+};
+
 export default ConversationPage;
