@@ -6,12 +6,15 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 //10mins
 
+import { formSchema } from "./constants";
+
 const ConversationPage = () => {
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       prompt: "",
     },
   });
+
   return (
     <div>
       <Heading
