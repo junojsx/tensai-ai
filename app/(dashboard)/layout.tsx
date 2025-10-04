@@ -1,7 +1,9 @@
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
-      {children}
+    <div className="h-full relative">
+      <div className="hidden h-full md:flex md:flex-col md:fixed md:inset-y-0 z-[80] bg-gray-900">
+        <h1>Hello Sidebar</h1>
+      </div>
     </div>
   );
 };
