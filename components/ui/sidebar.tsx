@@ -1,7 +1,11 @@
 "use client";
 
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+
+const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
 const Sidebar = () => {
   return (
@@ -12,7 +16,9 @@ const Sidebar = () => {
           <div className="relative mr-2">
             <Image width="100" height="100" alt="logo" src="/logo.png" />
           </div>
-          <h2 className="text-2xl font-bold">Tensai</h2>
+          <h2 className={cn("text-3xl font-bold", montserrat.className)}>
+            Tensai
+          </h2>
         </Link>
 
         <Link
