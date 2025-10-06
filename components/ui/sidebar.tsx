@@ -8,9 +8,9 @@ const Sidebar = () => {
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
       {" "}
       <div className="px-3 py-2 flex-1">
-        <Link href="/" className="flex items-center mb-14 pl-3">
-          <div className="relative w-30 h-30 mr-4">
-            <Image fill alt="logo" src="/logo.png" />
+        <Link href="/" className="flex items-center mb-2 pl-2">
+          <div className="relative mr-2">
+            <Image width="100" height="100" alt="logo" src="/logo.png" />
           </div>
           <h2 className="text-2xl font-bold">Tensai</h2>
         </Link>
