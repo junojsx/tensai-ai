@@ -4,8 +4,17 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { LayoutDashboard } from "lucide-react";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
+const routes = [
+  {
+    label: "Dashboard",
+    href: "/dashboard",
+    icon: LayoutDashboard,
+    color: "text-blue-500",
+  },
+];
 
 const Sidebar = () => {
   return (
@@ -20,8 +29,18 @@ const Sidebar = () => {
             Tensai
           </h2>
         </Link>
+        <div className="space-y-1">
+          {routes.map((route) => (
+            <Link href={route.href} key={route.href}>
+              <div className="flex items-center flex-1">
+                <route.icon className={cn("h-5 w-5 mr-3", route.color)} />
+                <span className="font-medium">{route.label}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-        <Link
+        {/* <Link
           href="/dashboard"
           className="block py-2 px-4 rounded hover:bg-gray-700"
         >
@@ -38,7 +57,7 @@ const Sidebar = () => {
           className="block py-2 px-4 rounded hover:bg-gray-700"
         >
           Settings
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
