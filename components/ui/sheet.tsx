@@ -71,6 +71,7 @@ function SheetContent({
         )}
         {...props}
       >
+        <SheetTitle className="sr-only">Sidebar Navigation</SheetTitle>
         {children}
         <SheetPrimitive.Close className="ring-offset-background  focus:ring-blue-700 data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none">
           <XIcon className="size-4 text-red-500" />
