@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-// import { Configuration, OpenAIApi } from "openai"; deprecated
+// import { Configuration, OpenAIApi } from "openai";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
